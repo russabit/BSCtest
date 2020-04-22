@@ -1,0 +1,2 @@
+rootProject.name='BSCtest'
+include ':app'
