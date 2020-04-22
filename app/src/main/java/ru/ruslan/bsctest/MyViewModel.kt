@@ -7,8 +7,9 @@ import ru.ruslan.bsctest.utils.AccountsCreator
 
 class MyViewModel(application: Application) : AndroidViewModel(application) {
 
-    val accountsList: ArrayList<Account> = AccountsCreator.getAccountsList()
-
-    //logic to sort the list and then expose it with liveData to the view
-    
+    private val accountsList: ArrayList<Account> = AccountsCreator.getAccountsList()
+    private val rurList = accountsList.filter { it.currencyName == "RUR" }
+    private val usdList = accountsList.filter { it.currencyName == "USD" }
+    private val eurList = accountsList.filter { it.currencyName == "EUR" }
+    val finalList = rurList.plus(usdList).plus(eurList)
 }

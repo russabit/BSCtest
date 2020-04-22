@@ -15,9 +15,9 @@ fun rurAdapterDelegate() = adapterDelegate<Rur, Account>(R.layout.recyclerview_l
     val amount = findViewById<TextView>(R.id.rur_amount)
 
     bind {
-        name.text = item.CurrencyName //item is set to the current bound item from List<Currencies>. Item is of type Rur
-        image.setImageResource(item.CurrencyPicture)
-        amount.text = item.Balance.toString()
+        name.text = item.currencyName //item is set to the current bound item from List<Currencies>. Item is of type Rur
+        image.setImageResource(item.currencyPicture)
+        amount.text = item.balance.toString()
     }
 }
 
@@ -27,9 +27,9 @@ fun usdAdapterDelegate() = adapterDelegate<Usd, Account>(R.layout.recyclerview_l
     val amount = findViewById<TextView>(R.id.usd_amount)
 
     bind {
-        name.text = item.CurrencyName //item is set to the current bound item from List<Currencies>. Item is of type Usd
-        image.setImageResource(item.CurrencyPicture)
-        amount.text = item.Balance.toString()
+        name.text = item.currencyName //item is set to the current bound item from List<Currencies>. Item is of type Usd
+        image.setImageResource(item.currencyPicture)
+        amount.text = item.balance.toString()
     }
 }
 
@@ -38,8 +38,8 @@ fun eurAdapterDelegate() = adapterDelegate<Eur, Account>(R.layout.recyclerview_l
     val image = findViewById<ImageView>(R.id.eur_currency_picture)
 
     bind {
-        name.text = item.CurrencyName //item is set to the current bound item from List<Currencies>. Item is of type Usd
-        image.setImageResource(item.CurrencyPicture)
+        name.text = item.currencyName //item is set to the current bound item from List<Currencies>. Item is of type Usd
+        image.setImageResource(item.currencyPicture)
     }
 }
 

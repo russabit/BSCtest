@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             eurAdapterDelegate()
         )
 
-        adapter.items = viewModel.accountsList
+        adapter.items = viewModel.finalList
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
